@@ -5,15 +5,15 @@
 
 # Resource Group Outputs
 output "location" {
-  value = azurerm_resource_group.aks_rg.location
+  value = var.location
 }
 
 output "resource_group_id" {
-  value = azurerm_resource_group.aks_rg.id
+  value = "/subscriptions/c9a2c4bf-579f-4d52-99f6-2555e370f4a5/resourceGroups/RG-Container"
 }
 
 output "resource_group_name" {
-  value = azurerm_resource_group.aks_rg.name
+  value = var.resource_group_name
 }
 
 # Azure AKS Versions Datasource
