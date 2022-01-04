@@ -44,13 +44,13 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   }
 
 # RBAC and Azure AD Integration Block
-#role_based_access_control {
-#  enabled = true
-#  azure_active_directory {
-#    managed                = true
-#    admin_group_object_ids = [azuread_group.aks_administrators.id]
-#  }
-#}  
+role_based_access_control {
+  enabled = true
+  azure_active_directory {
+    managed                = true
+    admin_group_object_ids = [azuread_group.aks_administrators.id]
+  }
+}  
 
 # Windows Admin Profile
 windows_profile {
