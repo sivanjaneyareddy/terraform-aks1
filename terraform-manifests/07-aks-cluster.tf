@@ -38,7 +38,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
   addon_profile {
     azure_policy { enabled = true }
     oms_agent {
-      enabled                    = true
+      enabled                    = false
       log_analytics_workspace_id = azurerm_log_analytics_workspace.insights.id
     }
   }
